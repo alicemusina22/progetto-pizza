@@ -8,8 +8,9 @@
   </head>
   <body class="bg-background text-gray-800">
     <header class="sticky bg-background top-0 h-20 z-50">
-      <nav class="flex justify-between items-center px-6 py-4">
-        <div class="flex items-center space-x-8">
+      <nav class="flex items-center px-6 py-4 relative">
+        <!-- Left section -->
+        <div class="flex items-center space-x-8 absolute left-6">
           <button
             class="text-white hover:text-gray-300 transition-colors"
             aria-label="Toggle menu"
@@ -34,52 +35,17 @@
           </div>
         </div>
 
-        <div class="text-center">
+        <!-- Center section - truly centered -->
+        <div class="text-center w-full">
           <h1 class="text-white text-2xl md:text-3xl font-serif">Delizioso</h1>
           <p class="text-gray-400 text-xs uppercase tracking-widest">
             Restaurant & Delivery
           </p>
         </div>
 
-        <div class="flex items-center space-x-4">
-          <button
-            class="text-white hover:text-gray-300 transition-colors flex items-center"
-          >
-            <span class="hidden md:inline mr-1">My Account</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="{1.5}"
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
-          </button>
-          <button
-            class="text-white hover:text-gray-300 transition-colors flex items-center"
-          >
-            <span class="hidden md:inline mr-1">Basket</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="{1.5}"
-                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-              />
-            </svg>
-          </button>
+        <!-- Right section (empty but maintains balance) -->
+        <div class="flex items-center space-x-4 absolute right-6">
+          <!-- Empty space to balance left side -->
         </div>
       </nav>
     </header>
@@ -130,12 +96,13 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="bg-[#f5efdb] text-white py-16 sm:py-24">
+    <!--altro bg provato #f5efdb-->
+    <section id="about" class="bg-[#eadac0] text-white py-16 sm:py-24">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2
-              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-serif"
+              class="text-3xl tracking-tight text-gray-900 sm:text-4xl font-serif"
             >
               About Delizioso
             </h2>
@@ -254,26 +221,28 @@
     </section>
 
     <!-- Reviews Section Start -->
-    <div class="bg-[#f5efdb] py-16 px-4 md:px-8">
+    <div class="bg-[#eadac0] py-16 px-4 md:px-8">
       <div class="max-w-7xl mx-auto">
         <h2
           class="text-gray-900 text-4xl md:text-5xl text-center font-serif mb-16"
         >
-          What Our Customers Say
+          Cosa dicono di noi
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Review 1 -->
           <div
-            class="bg-white border border-amber-200 p-8 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
+            class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
           >
             <blockquote
-              class="text-gray-700 italic text-lg flex-grow min-h-[150px]"
+              class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
             >
-              "Best pizza in town! The crust was perfectly crispy, and the sauce
-              tasted incredibly fresh. Felt like a real Italian pizzeria."
+              "Non credevo di trovare una vera pizzeria napoletana a Udine,
+              oltre all’eccellente qualità della pizza abbiamo trovato anche la
+              gentilezza, la simpatia, l’attenzione e tutto il calore dello
+              spirito campano."
             </blockquote>
-            <div class="mt-auto pt-6">
+            <div class="mt-auto pt-3">
               <p class="font-semibold text-gray-900">- Alex P.</p>
               <div class="mt-2 text-amber-500 text-xl">★★★★★</div>
             </div>
@@ -281,15 +250,16 @@
 
           <!-- Review 2 -->
           <div
-            class="bg-white border border-amber-200 p-8 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
+            class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
           >
             <blockquote
-              class="text-gray-700 italic text-lg flex-grow min-h-[150px]"
+              class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
             >
-              "Simple, delicious, and authentic. The Margherita pizza was
-              outstanding. Friendly service too!"
+              "Pizza buonissima con impasto molto leggero. Consigliato e di
+              sicuro ci ritornerò al più presto. Un plauso allo staff intero per
+              l'accoglienza!!"
             </blockquote>
-            <div class="mt-auto pt-6">
+            <div class="mt-auto pt-3">
               <p class="font-semibold text-gray-900">- Jessica M.</p>
               <div class="mt-2 text-amber-500 text-xl">★★★★★</div>
             </div>
@@ -297,15 +267,15 @@
 
           <!-- Review 3 -->
           <div
-            class="bg-white border border-amber-200 p-8 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
+            class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
           >
             <blockquote
-              class="text-gray-700 italic text-lg flex-grow min-h-[150px]"
+              class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
             >
-              "A hidden gem! High-quality ingredients and clearly made with
-              care. We always order from Pizza Bella for our family nights."
+              "Ottima scoperta! Pizza molto buona e personale molto cortese. Ci
+              tornerò sicuramente."
             </blockquote>
-            <div class="mt-auto pt-6">
+            <div class="mt-auto pt-3">
               <p class="font-semibold text-gray-900">- David K.</p>
               <div class="mt-2 text-amber-500 text-xl">★★★★☆</div>
             </div>
@@ -387,12 +357,12 @@
     <!-- Visit Us Section End -->
 
     <!-- Footer -->
-    <footer class="bg-amber-50 pt-16 pb-10">
+    <footer class="bg-[#eadac0] pt-16 pb-10">
       <div class="container mx-auto px-6 lg:px-8">
         <!-- Centered Logo and Social Media -->
         <div class="flex flex-col items-center text-center">
           <div class="mb-6">
-            <a href="/" class="text-3xl font-script text-[#981515] font-bold"
+            <a href="/" class="text-3xl font-script text-[#981515] font-serif"
               >Delizioso</a
             >
             <p class="text-xs uppercase tracking-wide text-gray-600 mt-1">
@@ -465,7 +435,7 @@
         </div>
         <!-- Copyright Bar -->
         <div
-          class="mt-16 pt-6 border-t border-gray-200 flex flex-col justify-center items-center text-gray-500 text-sm text-center"
+          class="mt-16 pt-6 border-t border-gray-500 flex flex-col justify-center items-center text-gray-500 text-sm text-center"
         >
           <p>© 2023 Pizzeria Delizioso. All rights reserved.</p>
           <p class="mt-2">
