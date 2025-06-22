@@ -8,60 +8,84 @@
   </head>
   <body class="bg-background text-gray-800">
     <header class="sticky bg-background top-0 h-20 z-50">
-      <nav class="flex items-center px-6 py-4 relative">
-        <!-- Left section -->
-        <div class="flex items-center space-x-8 absolute left-6">
-          <button
-            class="text-white hover:text-gray-300 transition-colors"
-            aria-label="Toggle menu"
+      <nav class="h-full flex items-center justify-between px-6 py-4 relative">
+        <!-- mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white hover:text-gray-300 hover:cursor-pointer transition-colors z-50"
+          aria-label="Toggle menu"
+        >
+          <div id="hamburger-icon" class="flex flex-col space-y-1">
+            <div
+              class="w-6 h-0.5 bg-white transition-transform duration-300"
+            ></div>
+            <div
+              class="w-6 h-0.5 bg-white transition-opacity duration-300"
+            ></div>
+            <div
+              class="w-6 h-0.5 bg-white transition-transform duration-300"
+            ></div>
+          </div>
+        </button>
+
+        <!-- desktop navigation -->
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="#about"
+            class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
           >
-            <div class="flex flex-col space-y-1">
-              <div class="w-6 h-0.5 bg-white"></div>
-              <div class="w-6 h-0.5 bg-white"></div>
-              <div class="w-6 h-0.5 bg-white"></div>
-            </div>
-          </button>
-          <div class="hidden md:flex space-x-6">
-            <a
-              href="#about"
-              class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
-            >
-              Chi Siamo
-            </a>
-            <a
-              href="#menu"
-              class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
-            >
-              Menu
-            </a>
-            <a
-              href="#contact"
-              class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
-            >
-              Contatti
-            </a>
-          </div>
+            Chi Siamo
+          </a>
+          <a
+            href="#menu"
+            class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
+          >
+            Menu
+          </a>
+          <a
+            href="#contact"
+            class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
+          >
+            Contatti
+          </a>
         </div>
 
-        <!-- Center section - truly centered -->
-        <div class="text-center w-full">
-          <div class="block">
-            <h1
-              class="text-white text-2xl md:text-3xl font-serif"
-            >
-              Delizioso
-            </h1>
-            <p class="text-gray-400 text-xs uppercase tracking-widest">
-              Restaurant & Delivery
-            </p>
-          </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 text-center">
+          <h1 class="text-white text-2xl md:text-3xl font-serif">Delizioso</h1>
+          <p class="text-gray-400 text-xs uppercase tracking-widest">
+            Restaurant & Delivery
+          </p>
         </div>
 
-        <!-- Right section (empty but maintains balance) -->
-        <div class="flex items-center space-x-4 absolute right-6">
-          <!-- Empty space to balance left side -->
-        </div>
+        <div class="w-6 md:w-auto"></div>
       </nav>
+
+      <!-- mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-black bg-opacity-95 transform -translate-y-full transition-transform duration-300 ease-in-out z-40"
+      >
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+          <a
+            href="#about"
+            class="mobile-menu-link text-white text-2xl font-medium hover:text-gray-300 transition-colors uppercase tracking-wide"
+          >
+            Chi Siamo
+          </a>
+          <a
+            href="#menu"
+            class="mobile-menu-link text-white text-2xl font-medium hover:text-gray-300 transition-colors uppercase tracking-wide"
+          >
+            Menu
+          </a>
+          <a
+            href="#contact"
+            class="mobile-menu-link text-white text-2xl font-medium hover:text-gray-300 transition-colors uppercase tracking-wide"
+          >
+            Contatti
+          </a>
+        </div>
+      </div>
     </header>
 
     <!--bg possibile #1c1c1c]-->
@@ -72,16 +96,7 @@
       <div
         class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 pb-30 md:pb-60 z-10"
       >
-        <!-- Bottom-right basil image -->
-        <!-- <div
-          class="absolute bottom-60 right-40 z-10 w-20 md:w-24 lg:w-32 opacity-80"
-        >
-          <img
-            src="basil.png"
-            alt="Basil leaf decoration"
-            class="w-full"
-          />
-        </div> -->
+
         <h2
           class="text-white font-serif italic text-4xl md:text-5xl lg:text-6xl mb-2"
         >
@@ -111,7 +126,10 @@
 
     <!-- About Us Section -->
     <!--altro bg provato #f5efdb-->
-    <section id="about" class="scroll-mt-20 bg-[#eadac0] text-white py-16 sm:py-24">
+    <section
+      id="about"
+      class="scroll-mt-20 bg-[#eadac0] text-white py-16 sm:py-24"
+    >
       <div class="container mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
@@ -142,7 +160,7 @@
         </div>
       </div>
     </section>
-    <!-- Pizza Menu Section Start -->
+    <!-- Pizza Menu Section -->
     <section
       id="menu"
       class="scroll-mt-20 bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg)] py-16 px-4 md:px-8"
@@ -234,7 +252,7 @@
       </div>
     </section>
 
-    <!-- Reviews Section Start -->
+    <!-- Reviews Section -->
     <div class="bg-[#eadac0] py-16 px-4 md:px-8">
       <div class="max-w-7xl mx-auto">
         <h2
@@ -244,7 +262,6 @@
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Review 1 -->
           <div
             class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
           >
@@ -262,7 +279,6 @@
             </div>
           </div>
 
-          <!-- Review 2 -->
           <div
             class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
           >
@@ -279,7 +295,6 @@
             </div>
           </div>
 
-          <!-- Review 3 -->
           <div
             class="bg-white p-6 rounded-sm transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-amber-700/20 flex flex-col h-full"
           >
@@ -298,7 +313,7 @@
       </div>
     </div>
 
-    <!-- Visit Us Section Start -->
+    <!-- Visit Us Section -->
     <div
       id="contact"
       class="scroll-mt-20 bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg)] py-16 px-4 md:px-8 border-t border-gray-800"
@@ -313,7 +328,6 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.5fr_2fr_2fr] gap-8 items-center"
         >
-          <!-- Delivery Image (Left) -->
           <div class="hidden md:flex justify-center items-center relative">
             <img
               src="basil1.png"
@@ -322,7 +336,6 @@
             />
           </div>
 
-          <!-- Address and Hours (Middle) -->
           <div
             class="text-lg flex flex-col items-center sm:items-start text-center sm:text-left"
           >
@@ -350,7 +363,6 @@
             </p>
           </div>
 
-          <!-- Map Embed (Right) -->
           <div
             class="rounded-sm overflow-hidden border border-gray-800 shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
           >
@@ -369,12 +381,10 @@
         </div>
       </div>
     </div>
-    <!-- Visit Us Section End -->
 
-    <!-- Footer -->
+    <!-- footer -->
     <footer class="bg-[#eadac0] pt-16 pb-10">
       <div class="container mx-auto px-6 lg:px-8">
-        <!-- Centered Logo and Social Media -->
         <div class="flex flex-col items-center text-center">
           <div class="mb-6">
             <a href="/" class="text-3xl font-script text-[#981515] font-serif"
@@ -385,9 +395,7 @@
             </p>
           </div>
 
-          <!-- Social Media Icons -->
           <div class="flex space-x-4 mt-4">
-            <!--Instagram Icon-->
             <a
               href="#"
               class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-[#DD2A7B] hover:scale-120"
@@ -403,7 +411,6 @@
                 />
               </svg>
             </a>
-            <!--Facebook logo-->
             <a
               href="#"
               class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-[#1877F2] hover:scale-120"
@@ -419,7 +426,6 @@
                 />
               </svg>
             </a>
-            <!-- TikTok Icon -->
             <a
               href="#"
               class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-black hover:scale-120"
@@ -435,7 +441,6 @@
                 />
               </svg>
             </a>
-            <!-- TripAdvisor Icon -->
             <a
               href="#"
               class="bg-gray-800 text-white p-2 rounded-full transform transition-all duration-300 hover:bg-[#00af87] hover:scale-120"
@@ -448,17 +453,82 @@
             </a>
           </div>
         </div>
-        <!-- Copyright Bar -->
         <div
           class="mt-16 pt-6 border-t border-gray-500 flex flex-col justify-center items-center text-gray-500 text-sm text-center"
         >
-          <p>© 2023 Pizzeria Delizioso. All rights reserved.</p>
+          <p>© 2025 Pizzeria Delizioso. All rights reserved.</p>
           <p class="mt-2">
             Website by
-            <a href="#" class="hover:text-[#981515]">yourcompany.com</a>
+            <a href="#" class="hover:text-[#981515]">Alice Musina</a>
           </p>
         </div>
       </div>
     </footer>
+
+    <script>
+      // mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+      let isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          // open menu
+          mobileMenu.classList.remove("-translate-y-full");
+          mobileMenu.classList.add("translate-y-0");
+
+          // transform hamburger to X
+          const lines = hamburgerIcon.children;
+          lines[0].style.transform = "rotate(45deg) translate(2px, 0px)";
+          lines[1].style.opacity = "0";
+          lines[2].style.transform = "rotate(-45deg) translate(9px, -6px)";
+
+          // prevent body scroll
+          document.body.style.overflow = "hidden";
+        } else {
+          // close menu
+          mobileMenu.classList.remove("translate-y-0");
+          mobileMenu.classList.add("-translate-y-full");
+
+          // reset hamburger
+          const lines = hamburgerIcon.children;
+          lines[0].style.transform = "";
+          lines[1].style.opacity = "";
+          lines[2].style.transform = "";
+
+          // restore body scroll
+          document.body.style.overflow = "";
+        }
+      }
+
+      mobileMenuButton.addEventListener("click", toggleMenu);
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isMenuOpen) {
+            toggleMenu();
+          }
+        });
+      });
+
+      // close menu on window resize to desktop size
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768 && isMenuOpen) {
+          toggleMenu();
+        }
+      });
+
+      // close menu when clicking outside
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) {
+          toggleMenu();
+        }
+      });
+    </script>
   </body>
 </html>
