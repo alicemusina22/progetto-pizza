@@ -22,25 +22,39 @@
             </div>
           </button>
           <div class="hidden md:flex space-x-6">
-            <button
+            <a
+              href="#about"
+              class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
+            >
+              Chi Siamo
+            </a>
+            <a
+              href="#menu"
               class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
             >
               Menu
-            </button>
-            <button
+            </a>
+            <a
+              href="#contact"
               class="text-white uppercase text-sm font-medium hover:text-gray-300 transition-colors"
             >
-              Specials
-            </button>
+              Contatti
+            </a>
           </div>
         </div>
 
         <!-- Center section - truly centered -->
         <div class="text-center w-full">
-          <h1 class="text-white text-2xl md:text-3xl font-serif">Delizioso</h1>
-          <p class="text-gray-400 text-xs uppercase tracking-widest">
-            Restaurant & Delivery
-          </p>
+          <div class="block">
+            <h1
+              class="text-white text-2xl md:text-3xl font-serif"
+            >
+              Delizioso
+            </h1>
+            <p class="text-gray-400 text-xs uppercase tracking-widest">
+              Restaurant & Delivery
+            </p>
+          </div>
         </div>
 
         <!-- Right section (empty but maintains balance) -->
@@ -78,7 +92,7 @@
           <span class="border-b-4 border-[#981515] pb-1">vent'anni</span>
         </h3>
         <p class="text-gray-300 max-w-md text-sm md:text-base">
-          Da oltre vent’anni portiamo avanti la nostra passione per la cucina
+          Da oltre vent'anni portiamo avanti la nostra passione per la cucina
           italiana. Da Delizioso la tradizione si fonde con un tocco moderno,
           offrendo a tutta la famiglia una cucina semplice, con ingredienti
           freschi e stagionali.
@@ -97,7 +111,7 @@
 
     <!-- About Us Section -->
     <!--altro bg provato #f5efdb-->
-    <section id="about" class="bg-[#eadac0] text-white py-16 sm:py-24">
+    <section id="about" class="scroll-mt-20 bg-[#eadac0] text-white py-16 sm:py-24">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
@@ -131,7 +145,7 @@
     <!-- Pizza Menu Section Start -->
     <section
       id="menu"
-      class="bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg)] py-16 px-4 md:px-8"
+      class="scroll-mt-20 bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg)] py-16 px-4 md:px-8"
     >
       <div class="max-w-7xl mx-auto">
         <h2
@@ -238,8 +252,8 @@
               class="text-gray-700 italic text-lg flex-grow min-h-[100px]"
             >
               "Non credevo di trovare una vera pizzeria napoletana a Udine,
-              oltre all’eccellente qualità della pizza abbiamo trovato anche la
-              gentilezza, la simpatia, l’attenzione e tutto il calore dello
+              oltre all'eccellente qualità della pizza abbiamo trovato anche la
+              gentilezza, la simpatia, l'attenzione e tutto il calore dello
               spirito campano."
             </blockquote>
             <div class="mt-auto pt-3">
@@ -286,7 +300,8 @@
 
     <!-- Visit Us Section Start -->
     <div
-      class="bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg)] py-16 px-4 md:px-8 border-t border-gray-800"
+      id="contact"
+      class="scroll-mt-20 bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(stone.jpg)] py-16 px-4 md:px-8 border-t border-gray-800"
     >
       <div class="max-w-7xl mx-auto">
         <h2
